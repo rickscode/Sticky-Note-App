@@ -1,8 +1,10 @@
-export default class ToDo 
+class ToDo 
 {
     constructor(title)
     {
         this.title = title;
-        console.log("title");
+        
     }
 }
+
+export default ToDo;
