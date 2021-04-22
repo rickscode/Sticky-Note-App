@@ -6,6 +6,3 @@ export default class ToDo
     }
 }
 
-
-
-// add more properties

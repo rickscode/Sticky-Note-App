@@ -1,7 +1,5 @@
 import newTd from "./modules/ui"
+import newProject from "./modules/ui"
 
-// test newTd function is connected
-
-newTd();
 
 

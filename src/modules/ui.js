@@ -1,13 +1,12 @@
-import ToDo from "./to-do"
+import ToDo from "./task"
+import Project from "./project"
 
-// create trigger function
+// new task
 
-const trigger = document.getElementById("add-todo");
+const trigger = document.getElementById("add-task");
 trigger.addEventListener("click", newTd);
 
-// send user input to ToDo object template 
-
-function newTd()
+export function newTd()
 {
     const input = document.getElementById("todo-title").value;
     const newToDo = new ToDo(input); 
@@ -15,5 +14,17 @@ function newTd()
 }
 
 
-export default newTd;
+// new project
+const projectTrigger = document.getElementById("add-project");
+projectTrigger.addEventListener("click", newProject); 
+
+export function newProject()
+{
+    const input = document.getElementById("project-name").value;
+    const project = new Project(input); 
+    console.table(project);
+    console.log(project.name);
+}
+
+
 
