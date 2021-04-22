@@ -1,1 +1,1 @@
-(()=>{"use strict";const t=new class{constructor(t){this.title=t}}("gym");console.table(t)})();
+(()=>{"use strict";class t{constructor(t){this.title=t}}function e(){const e=document.getElementById("todo-title").value,n=new t(e);console.table(n)}document.getElementById("add-todo").addEventListener("click",e),e()})();

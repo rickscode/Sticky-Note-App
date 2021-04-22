@@ -1,8 +1,7 @@
-import ToDo from "./modules/to-do"
+import newTd from "./modules/ui"
 
-// create new object
-// then add trigger
+// test newTd function is connected
 
-const newToDo = new ToDo("gym");
+newTd();
 
-console.table(newToDo);
+
