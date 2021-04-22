@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=new class{constructor(t){this.title=t}}("gym");console.table(t)})();
