@@ -23,7 +23,6 @@ export function newProject()
     const input = document.getElementById("project-name").value;
     const project = new Project(input); 
     console.table(project);
-    console.log(project.name);
 }
 
 
