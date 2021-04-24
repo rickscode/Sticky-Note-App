@@ -1,4 +1,4 @@
-export default class ToDo 
+export default class Task 
 {
     constructor(title)
     {

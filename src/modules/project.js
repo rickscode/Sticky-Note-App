@@ -3,7 +3,7 @@ export default class Project
     constructor(name)
     {
         this.name = name;
-        this.task = [/*push task obejects here*/];
+        this.tasks = [/*push tasks obejects here*/];
     }
 
   setName(name)    
@@ -15,4 +15,16 @@ export default class Project
   {
     return this.name;
   }
+
+  settasks(tasks)    
+  {
+    this.tasks += tasks;
+  }
+
+  gettasks() 
+  {
+    return this.tasks;
+  }
+
+  
 }
