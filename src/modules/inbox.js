@@ -1,7 +1,6 @@
 import Project from "./project"
 import Task from "./task"
 
-
 // default inbox object to store all tasks
 
 export default function inbox()

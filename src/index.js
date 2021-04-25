@@ -6,11 +6,10 @@ import Goal from "./modules/goal"
 // Import objects
 import inbox from "./modules/inbox"
 
-
-
 // default inbox object to store all tasks
 inbox();
 
 // goals object
+
 
 
