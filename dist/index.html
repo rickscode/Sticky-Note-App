@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>STACKS APP</title>
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
     <nav class="nav-bar">
-      <img id="dmt-eye" src="images/vision.png" alt="dmt-eye" width="50" height="50">
+      <img id="dmt-eye" onclick="openNav()" src="images/vision.png" alt="dmt-eye" width="40" height="40">
     </nav>
-    <div class="left-menu">testsadasdsafffasffa</div>
-    
+
+    <div id="left-menu" class="left-menu">
+      <img id="close" src="images/close.png" alt="close" onclick="closeNav()">
+      <!--ul li data-attributes-->
+    </div>
+    <script>
+      function closeNav() 
+          {
+            document.getElementById("left-menu").style.width = "0";
+            document.getElementById("close").style.visibility = "hidden";
+          }
+
+    function openNav() 
+        {
+          document.getElementById("left-menu").style.width = "300px";
+          document.getElementById("close").style.visibility = "visible";
+        }
+    </script>
     
     
     
