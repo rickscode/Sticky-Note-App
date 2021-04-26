@@ -10,8 +10,8 @@ const inbox = new Project("inbox");
 console.table(inbox);
 
 // create and store new tasks in inbox
-// const trigger = document.getElementById("add-task");
-// trigger.addEventListener("click", newTask);
+const trigger = document.getElementById("add-task");
+trigger.addEventListener("click", newTask);
 
 function newTask()
 {

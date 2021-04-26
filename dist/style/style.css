@@ -100,12 +100,25 @@ span
     right:5%;
 }
 
+#open-task-input:hover
+{
+    cursor: pointer;
+}
+
 .input-container
 {
     position: absolute;
     background-color:#1481E0;
+    border-radius: 15px;
     visibility: hidden;
-    width: 20vw;
+    width: 250px;
+    height: 50px;
     margin-top: 25%;
     margin-left: 50%;
 }
+
+#todo-title
+{
+    margin:13px;
+}
+
