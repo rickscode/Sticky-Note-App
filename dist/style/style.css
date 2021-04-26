@@ -22,6 +22,12 @@ body
     padding: 5px;
     }
 
+#dmt-eye:hover 
+    {
+        cursor: pointer;
+        
+    }
+
 .left-menu 
     {
     height: 100vh;
@@ -35,8 +41,48 @@ body
     }
 
 #close
-{
-    position: absolute;
-    margin-top: 20%;
-    margin-left: 90%;
-}
+    {
+        position: absolute;
+        margin-top: 20%;
+        margin-left: 90%;
+    }
+
+#close:hover 
+    {
+        cursor: pointer;
+        
+    }
+
+ul 
+    {
+        list-style: none;
+    }
+
+li 
+    {
+        display: list-item;
+        padding: 2%;
+    }
+
+.left-menu li 
+    {
+        border-radius: 3px;
+        margin-right: 20px;
+    }
+
+.left-menu li:hover 
+    {
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+.stack-list
+    {
+        margin-top: 35%;
+    }
+
+span
+    {
+    font-family: tahoma;
+    font-size: 1em;
+    }
