@@ -86,3 +86,26 @@ span
     font-family: tahoma;
     font-size: 1em;
     }
+
+#new-stack
+{
+    margin-top: 5%;
+    margin-left: 40%
+}
+
+#open-task-input
+{
+    position:absolute;
+    bottom:5%;
+    right:5%;
+}
+
+.input-container
+{
+    position: absolute;
+    background-color:#1481E0;
+    visibility: hidden;
+    width: 20vw;
+    margin-top: 25%;
+    margin-left: 50%;
+}
