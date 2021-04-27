@@ -1,19 +1,21 @@
 import Project from "./project"
 import Task from "./task"
+import closeTaskWindow from "./task-dom"
 
-// default inbox object to store all tasks
+// default stacks inbox object to store all tasks
 
 export default function inbox()
 {
+
 // create default inbox object
 const inbox = new Project("inbox");
 console.table(inbox);
 
-// create and store new tasks in inbox
 const trigger = document.getElementById("add-task");
-trigger.addEventListener("click", newTask);
+trigger.addEventListener("click", newInboxTask);
 
-function newTask()
+// create and store new tasks in inbox
+function newInboxTask()
 {
     const taskInput = document.getElementById("todo-title").value;
     const task = new Task(taskInput); 
@@ -26,6 +28,7 @@ function storeInboxTask(task)
 {
     inbox.settasks(task)
     console.log(inbox)
+    closeTaskWindow()
 }
 
 }
