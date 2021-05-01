@@ -1,5 +1,7 @@
-export default function closeTaskWindow()
 
+// Close and reset input value
+
+export default function closeTaskWindow()
 {
     const taskWindow = document.getElementById("input-container");
     const taskInputWindow = document.getElementById("todo-title");

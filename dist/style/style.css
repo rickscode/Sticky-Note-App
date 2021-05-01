@@ -16,13 +16,13 @@ body
     position: fixed;
     }
 
-#dmt-eye
+.dmt-eye
     {
     margin-left: 2vw;
     padding: 5px;
     }
 
-#dmt-eye:hover 
+.dmt-eye:hover 
     {
         cursor: pointer;
         
@@ -40,14 +40,14 @@ body
     transition: 0.5s;
     }
 
-#close
+.close
     {
         position: absolute;
         margin-top: 20%;
         margin-left: 90%;
     }
 
-#close:hover 
+.close:hover 
     {
         cursor: pointer;
         
@@ -93,14 +93,24 @@ span
     margin-left: 40%
 }
 
-#open-task-input
+.task-container
+{   
+    position: absolute;
+    border: solid 1px grey;
+    margin-top: 75px;
+    margin-left: 320px;
+    height: 75vh;
+    width:70vw;
+}
+
+.open-task-input
 {
     position:absolute;
     bottom:5%;
     right:5%;
 }
 
-#open-task-input:hover
+.open-task-input:hover
 {
     cursor: pointer;
 }
@@ -114,10 +124,10 @@ span
     width: 400px;
     height: 50px;
     margin-top: 25%;
-    margin-left: 50%;
+    margin-left: 45%;
 }
 
-#todo-title
+.todo-title
 {
     margin:13px;
 }

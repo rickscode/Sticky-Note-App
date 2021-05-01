@@ -6,12 +6,12 @@ import controlSideNav from "./modules/side-menu-function"
 
 
 // Import objects
-import inbox from "./modules/inbox"
+import load from "./modules/load"
 import {openTaskInput} from "./modules/ui-triggers"
 
 
-// default inbox object to store all tasks
-inbox();
+// load load object to store all tasks
+load();
 
 // collapsable side menu
 controlSideNav();

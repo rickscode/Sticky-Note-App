@@ -8,12 +8,12 @@
   </head>
   <body>
     <nav class="nav-bar">
-      <img id="dmt-eye" src="images/vision.png" alt="dmt-eye" width="40" height="40">
+      <img id="dmt-eye" class="dmt-eye" src="images/vision.png" alt="dmt-eye" width="40" height="40">
     </nav>
     <!--Left collapsing menu-->
     <div id="left-menu" class="left-menu">
-      <img id="close" src="images/close.png" alt="close">
-      <ul class="stack-list" id="stack-list">
+      <img id="close" class="close" src="images/close.png" alt="close">
+      <ul id="stack-list" class="stack-list">
         <li id="stacks" data-store="stacks">
          <img id="stacks-icon" src="images/stacks.png" alt="stacks-icon" width="40" height="40">
          <span>Stacks</span>
@@ -36,9 +36,12 @@
       </ul>
     </div>
 
+    <!--Display tasks on default dom window-->
+    <div id="task-container" class="task-container">TASKS</div>
+
     <!--Open task input button-->
 
-    <a class="open-task-input" id="open-task-input">
+    <a id="open-task-input" class="open-task-input">
       <img id="open-tf" src="images/plus.png" alt="open-task-form" width="40" height="40">
     </a>
     
@@ -47,7 +50,7 @@
     <button id="add-project">ADD</button><br> -->
     
     <span id="input-container" class="input-container">
-      <input type="text" id="todo-title" placeholder="Enter Task">
+      <input type="text" id="todo-title" class="todo-title" placeholder="Enter Task">
       <input type="date" id="todo-date">
       <button id="add-task">ADD</button>
     </span>

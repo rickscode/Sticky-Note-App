@@ -18,7 +18,8 @@ trigger.addEventListener("click", newInboxTask);
 function newInboxTask()
 {
     const taskInput = document.getElementById("todo-title").value;
-    const task = new Task(taskInput); 
+    const taskDate = document.getElementById("todo-date").value;
+    const task = new Task(taskInput, taskDate); 
     console.table(task);
     storeInboxTask(task);
 }
