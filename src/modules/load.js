@@ -9,7 +9,7 @@ export default function inbox()
 
 // create default inbox object
 const inbox = new Project("inbox");
-console.table(inbox);
+
 
 const trigger = document.getElementById("add-task");
 trigger.addEventListener("click", newInboxTask);
@@ -28,7 +28,7 @@ function newInboxTask()
 function storeInboxTask(task)
 {
     inbox.settasks(task)
-    console.log(inbox)
+    console.table(inbox)
     closeTaskWindow()
 }
 
