@@ -19,10 +19,14 @@ function displayInboxTasks(inboxTasks)
     inboxTasks.forEach(function(item)
     {
 
-        let inboxTaskSticky = document.createElement("p");
-        inboxTaskSticky.textContent = item.title;
-        testSticky.appendChild(inboxTaskSticky);
+        let inboxStickyName = document.createElement("p");
+        let inboxStickyDate = document.createElement("p");
         
+        inboxStickyName.textContent = item.title;
+        inboxStickyDate.textContent = item.date;
+        
+        testSticky.appendChild(inboxStickyName);
+        testSticky.appendChild(inboxStickyDate);
     }
 )};
 

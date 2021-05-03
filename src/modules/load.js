@@ -28,24 +28,11 @@ function storeInboxTask(task)
 {
     inbox.setTasks(task)
     closeTaskWindow()
-
-    //console.table(inbox.tasks)
     const inboxTasks = inbox.tasks;
-    console.table(inboxTasks)
+    //console.table(inboxTasks)
     displayInboxTasks(inboxTasks)
 }
 
-// function displayInboxTasks(inboxTasks)
-// {
-//     inboxTasks.forEach(function(item)
-//     {
-
-//         let inboxTaskSticky = document.createElement("p");
-//         inboxTaskSticky.textContent = item.title;
-//         testSticky.appendChild(inboxTaskSticky);
-        
-//     }
-// )};
 
 }
 
