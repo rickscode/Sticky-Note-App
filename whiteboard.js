@@ -1,23 +1,7 @@
-// project object template class that can hold tasks
-// project module 
-export default class Project
+function displayInboxTasks()
 {
-    constructor(name, task)
+    inbox.tasks.forEach(function(item)
     {
-        this.name = name;
-        this.task = [/*push task obejects here*/];
+        console.log("daisy")
     }
-}
-
-// create project object from input
-// triggers module 
-
-const projectTrigger = document.getElementById("add-project");
-projectTrigger.addEventListener("click", newProject); 
-
-function newProject()
-{
-    const input = document.getElementById("project-name").value;
-    const project = new Project(input); 
-    console.table(project);
-}
+)};
