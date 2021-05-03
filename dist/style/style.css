@@ -95,13 +95,34 @@ span
 
 .task-container
 {   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
     position: absolute;
     border: solid 1px grey;
     text-align: center;
+    color: black;
     margin-top: 75px;
     margin-left: 320px;
     height: 75vh;
     width:70vw;
+}
+
+.sticky-note
+{
+  height: 150px;
+  width: 150px;
+  background-color: #FFFF88;
+  font-family: 'Coming Soon', cursive;
+  text-align: center;
+}
+
+.sticky-note p
+{
+  top: 10vh;
+  line-height: 25px;
 }
 
 .open-task-input
