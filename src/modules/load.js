@@ -4,6 +4,7 @@ import {closeTaskWindow} from "./task-dom"
 import {displayInboxTasks} from "./task-dom"
 
 // default inbox object to store all tasks
+
 export default function inbox()
 {
 
@@ -18,21 +19,25 @@ function newInboxTask()
 {
     const taskInput = document.getElementById("todo-title").value;
     const taskDate = document.getElementById("todo-date").value;
-    const task = new Task(taskInput, taskDate); 
-    //console.table(task);
+    const task = new Task(taskInput, taskDate);
+    closeTaskWindow()
     storeInboxTask(task);
 }
 
-// store task to inbox 
+// clean up this function
 function storeInboxTask(task)
 {
+    // store task to inbox object tasks array
     inbox.setTasks(task)
-    closeTaskWindow()
+    // store inbox object tasks array in variable
     const inboxTasks = inbox.tasks;
-    //console.table(inboxTasks)
-    displayInboxTasks(inboxTasks)
+    // store new task temp in empty array
+    const newInboxTasks = [task];
+    // call function to display new task
+    displayInboxTasks(newInboxTasks)
+    // check tasks in object
+    console.table(inbox);
 }
-
 
 }
 

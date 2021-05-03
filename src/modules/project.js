@@ -3,7 +3,7 @@ export default class Project
     constructor(name)
     {
         this.name = name;
-        this.tasks = [{title:"HEHE"}];
+        this.tasks = [];
     }
 
   setName(name)    

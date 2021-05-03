@@ -14,20 +14,34 @@ function closeTaskWindow()
 
 function displayInboxTasks(inboxTasks)
 {
+    
     const testSticky = document.getElementById("task-container");
 
     inboxTasks.forEach(function(item)
     {
 
-        let inboxStickyName = document.createElement("p");
-        let inboxStickyDate = document.createElement("p");
-        
+        const inboxStickyNote = document.createElement("div");
+        inboxStickyNote.id = "sticky-note";
+        inboxStickyNote.className = "sticky-note";
+
+        const inboxStickyName = document.createElement("p");
+        const inboxStickyDate = document.createElement("p");
+        const finishedTask = document.createElement("input");
+        finishedTask.type = "radio";
+                
         inboxStickyName.textContent = item.title;
         inboxStickyDate.textContent = item.date;
-        
-        testSticky.appendChild(inboxStickyName);
-        testSticky.appendChild(inboxStickyDate);
+        finishedTask.textContent = "Done";
+
+        inboxStickyNote.appendChild(inboxStickyName);
+        inboxStickyNote.appendChild(inboxStickyDate);
+        inboxStickyNote.appendChild(finishedTask);
+
+        testSticky.appendChild(inboxStickyNote);
+
     }
 )};
 
+
 export {closeTaskWindow, displayInboxTasks}
+
