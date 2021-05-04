@@ -39,7 +39,30 @@ function storeInboxTask(task)
     displayInboxTasks(newInboxTasks)
     // check tasks in object
     console.table(inbox);
+    
 }
+
+// remove single task from array
+
+const testTrigger = document.getElementById("sticky-note");
+    testTrigger.addEventListener("click", function(e)
+    {
+        // need to find a value of the sticky to pass in remove 
+        // parameter to replace test "rick"
+        let stickyNodeList = e.target.children
+
+        let stickyArr = Array.from(stickyNodeList);
+
+        stickyArr.splice(stickyArr.length - 2, 2);
+
+        //let x = newStickArr.toString();
+
+        console.log(stickyArr[0].textContent)
+
+        inbox.removeTask();
+        //console.table(inbox);
+
+    })
 
 }
 

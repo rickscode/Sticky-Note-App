@@ -26,9 +26,16 @@ export default class Project
     return this.tasks;
   }
 
-  getTodayTask()
+  removeTask()
   {
-    // code to return tasks due today
+    
+    // get index of object with name rick
+    var editTask = this.tasks.map(function(item) { return item.title; }).indexOf("rick");
+
+    // remove object
+    this.tasks.splice(editTask, 1);
+
+    
   }
 
 }
