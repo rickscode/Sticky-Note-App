@@ -26,11 +26,11 @@ export default class Project
     return this.tasks;
   }
 
-  removeTask()
+  removeTask(finishedSticky)
   {
     
     // get index of object with name rick
-    var editTask = this.tasks.map(function(item) { return item.title; }).indexOf("rick");
+    var editTask = this.tasks.map(function(item) { return item.title; }).indexOf(finishedSticky);
 
     // remove object
     this.tasks.splice(editTask, 1);

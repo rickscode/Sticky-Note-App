@@ -5,17 +5,13 @@ import {displayInboxTasks} from "./task-dom"
 
 // default inbox object to store all tasks
 
-function inbox()
-{
-
-// create default inbox object
-
 const inbox = new Project("inbox");
+
+function createTask()
+{
 
 const trigger = document.getElementById("add-task");
 trigger.addEventListener("click", newInboxTask);
-
-// create and store new tasks in inbox
 
 function newInboxTask()
 {
@@ -26,7 +22,9 @@ function newInboxTask()
     storeInboxTask(task);
 }
 
-// clean up this function
+}
+
+
 function storeInboxTask(task)
 {
     // store task to inbox object tasks array
@@ -38,32 +36,35 @@ function storeInboxTask(task)
     // call function to display new task
     displayInboxTasks(newInboxTasks)
     // check tasks in object
-    console.table(inbox);
+    //console.table(inbox);
+    finishTask();
+}
+
+// task needs to be called after displayInboxTasks but if not used
+// return nothing so when next called not called multiple times
+function finishTask(){
+    let testTrigger = document.querySelectorAll(".sticky-note");
+    testTrigger.forEach((item) => {
     
-}
-
-// remove single task from array
-
-const testTrigger = document.getElementById("sticky-note");
-    testTrigger.addEventListener("click", function(e)
+    item.addEventListener("click", function(e)
     {
-        // need to find a value of the sticky to pass in remove 
-        // parameter to replace test "rick"
+        
         let stickyNodeList = e.target.children
-
+    
         let stickyArr = Array.from(stickyNodeList);
-
-        stickyArr.splice(stickyArr.length - 2, 2);
-
-        //let x = newStickArr.toString();
-
-        console.log(stickyArr[0].textContent)
-
-        inbox.removeTask();
-        //console.table(inbox);
-
+        //console.log(stickyArr)
+        stickyArr.splice(1, 1);
+    
+        let finishedSticky = stickyArr[0].textContent;
+    
+        console.log(finishedSticky)
+    
+        inbox.removeTask(finishedSticky);
+        console.table(inbox);
+    
     })
-
-}
-
-export {inbox}
+    })
+    
+    }
+    
+export {createTask}

@@ -26,20 +26,22 @@ function displayInboxTasks(inboxTasks)
 
         const inboxStickyName = document.createElement("p");
         const inboxStickyDate = document.createElement("p");
-        const finishedTask = document.createElement("input");
-        finishedTask.type = "radio";
+        //const finishedTask = document.createElement("input");
+        //finishedTask.type = "radio";
                 
         inboxStickyName.textContent = item.title;
         inboxStickyDate.textContent = item.date;
-        finishedTask.textContent = "Done";
+        //finishedTask.textContent = "Done";
 
         inboxStickyNote.appendChild(inboxStickyName);
         inboxStickyNote.appendChild(inboxStickyDate);
-        inboxStickyNote.appendChild(finishedTask);
+        //inboxStickyNote.appendChild(finishedTask);
 
         testSticky.appendChild(inboxStickyNote);
 
     }
+
+    
 )};
 
 
