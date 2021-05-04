@@ -5,16 +5,18 @@ import {displayInboxTasks} from "./task-dom"
 
 // default inbox object to store all tasks
 
-export default function inbox()
+function inbox()
 {
 
 // create default inbox object
+
 const inbox = new Project("inbox");
 
 const trigger = document.getElementById("add-task");
 trigger.addEventListener("click", newInboxTask);
 
 // create and store new tasks in inbox
+
 function newInboxTask()
 {
     const taskInput = document.getElementById("todo-title").value;
@@ -41,4 +43,4 @@ function storeInboxTask(task)
 
 }
 
-
+export {inbox}

@@ -26,4 +26,9 @@ export default class Project
     return this.tasks;
   }
 
+  getTodayTask()
+  {
+    // code to return tasks due today
+  }
+
 }

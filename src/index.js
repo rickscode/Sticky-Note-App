@@ -1,17 +1,14 @@
-// Import classes
-import Project from "./modules/project"
-import Task from "./modules/task"
-import Goal from "./modules/goal"
+// Import 
 import controlSideNav from "./modules/side-menu-function"
 
 
-// Import objects
-import load from "./modules/load"
+// Import default objects
+import {inbox} from "./modules/load"
 import {openTaskInput} from "./modules/ui-triggers"
 
 
 // load load object to store all tasks
-load();
+inbox();
 
 // collapsable side menu
 controlSideNav();
