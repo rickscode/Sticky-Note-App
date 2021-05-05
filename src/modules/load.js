@@ -58,7 +58,8 @@ function manageInboxTask(task)
         console.log(finishedSticky)
     
         inbox.removeTask(finishedSticky);
-        console.table(inbox);
+        
+        console.log(inbox);
     
     })
     })

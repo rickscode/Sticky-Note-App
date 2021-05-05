@@ -9,8 +9,8 @@ function closeTaskWindow()
     taskWindow.style.visibility="hidden";
     taskInputWindow.value = "";
     // clear dom
-    let clearDomStickies = document.getElementById("task-container");
-    clearDomStickies.innerHTML = '';
+    // let clearDomStickies = document.getElementById("task-container");
+    // clearDomStickies.innerHTML = '';
 }
 
 // Display inbox tasks 
@@ -19,7 +19,7 @@ function displayInboxTasks(inboxTasks)
 {
     
     const testSticky = document.getElementById("task-container");
-
+    testSticky.innerHTML = '';
     inboxTasks.forEach(function(item)
     {
 
