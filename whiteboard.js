@@ -1,29 +1,50 @@
-// function is callin * number clicked e.g if click sticky second loop
-// runs twice
+function closeit(){
 
-// re write for radio input 
+let testTrigger = document.querySelectorAll(".sticky-note");
+testTrigger.addEventListener()
+    testTrigger.forEach((item) => {
+    
+    item.addEventListener("click", test(e))})
+}
+        
+    function test(e){
+        let stickyNodeList = e.target.children
+    
+        let stickyArr = Array.from(stickyNodeList);
+        //console.log(stickyArr)
+        stickyArr.splice(1, 1);
+    
+        let finishedSticky = stickyArr[0].textContent;
+    
+        console.log(finishedSticky)
+    
+        inbox.removeTask(finishedSticky);
+        console.table(inbox);
+    }
 
-function finishTask(){
+
+
+
     let testTrigger = document.querySelectorAll(".sticky-note");
     testTrigger.forEach((item) => {
     
     item.addEventListener("click", function(e)
     {
-        // node list of child elements
+        
         let stickyNodeList = e.target.children
-        // array from nodelist
+    
         let stickyArr = Array.from(stickyNodeList);
-        // remove last two elements to leave title string array
-        stickyArr.splice(stickyArr.length - 2, 2);
-        // access title string
+        //console.log(stickyArr)
+        stickyArr.splice(1, 1);
+    
         let finishedSticky = stickyArr[0].textContent;
-       
-        //console.log(finishedSticky)
+    
+        console.log(finishedSticky)
     
         inbox.removeTask(finishedSticky);
-        console.log(inbox);
+        console.table(inbox);
+
+        
     
     })
     })
-    
-    }

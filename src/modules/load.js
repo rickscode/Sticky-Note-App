@@ -6,6 +6,9 @@ import {displayInboxTasks} from "./task-dom"
 // default inbox object to store all tasks
 
 const inbox = new Project("inbox");
+const inboxTasks = inbox.tasks;
+
+let testTrigger = document.querySelectorAll(".sticky-note");
 
 function createTask()
 {
@@ -19,30 +22,25 @@ function newInboxTask()
     const taskDate = document.getElementById("todo-date").value;
     const task = new Task(taskInput, taskDate);
     closeTaskWindow()
-    storeInboxTask(task);
-}
-
-}
-
-
-function storeInboxTask(task)
-{
-    // store task to inbox object tasks array
-    inbox.setTasks(task)
-    // store inbox object tasks array in variable
-    const inboxTasks = inbox.tasks;
+    manageInboxTask(task);
+    
     // store new task temp in empty array
-    const newInboxTasks = [task];
+    //const newInboxTasks = [task];
     // call function to display new task
-    displayInboxTasks(newInboxTasks)
-    // check tasks in object
-    //console.table(inbox);
-    finishTask();
 }
 
-// task needs to be called after displayInboxTasks but if not used
-// return nothing so when next called not called multiple times
-function finishTask(){
+}
+
+function manageInboxTask(task)
+{   
+
+    // push task to inbox array 
+    inbox.setTasks(task)
+    console.log(inbox)
+    // display inbox task array on dom
+    displayInboxTasks(inboxTasks)
+
+    // remove task from inbox array 
     let testTrigger = document.querySelectorAll(".sticky-note");
     testTrigger.forEach((item) => {
     
@@ -64,7 +62,15 @@ function finishTask(){
     
     })
     })
+}
+
+// task needs to be called after displayInboxTasks but if not used
+// return nothing so when next called not called multiple times
+
+
+
+   
     
-    }
+    
     
 export {createTask}

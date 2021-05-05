@@ -8,6 +8,9 @@ function closeTaskWindow()
     
     taskWindow.style.visibility="hidden";
     taskInputWindow.value = "";
+    // clear dom
+    let clearDomStickies = document.getElementById("task-container");
+    clearDomStickies.innerHTML = '';
 }
 
 // Display inbox tasks 
@@ -39,9 +42,10 @@ function displayInboxTasks(inboxTasks)
 
         testSticky.appendChild(inboxStickyNote);
 
+        //closeTaskWindow()
+
     }
 
-    
 )};
 
 
