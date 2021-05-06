@@ -100,7 +100,7 @@ span
     justify-content: space-evenly;
     gap: 10px;
     position: absolute;
-    border: solid 1px grey;
+    /* border: solid 1px grey; */
     text-align: center;
     color: black;
     margin-top: 75px;

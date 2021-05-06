@@ -22,9 +22,16 @@ testTrigger.addEventListener()
         console.table(inbox);
     }
 
+    /// clear dom stickies
+
+    function clearTaskContainer()
+    {
+    const testSticky = document.getElementById("task-container");
+    testSticky.innerHTML = '';
+    }
 
 
-
+    ////////////////////////////////////////////////
     let testTrigger = document.querySelectorAll(".sticky-note");
     testTrigger.forEach((item) => {
     

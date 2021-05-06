@@ -13,13 +13,38 @@ function closeTaskWindow()
     // clearDomStickies.innerHTML = '';
 }
 
+// Clear inbox tasks
+function clearTaskContainer()
+    {
+    console.log("clear")
+    const taskBoard = document.getElementById("task-container");
+    taskBoard.innerHTML = '';
+    }
+
+// remove clicked task from dom 
+function removeSticky()
+{
+    const taskContainer = document.getElementById("task-container");
+    taskContainer.addEventListener("click", function(e)
+    {
+        if(e.target.className == "sticky-note")
+        {
+            const test = e.target;
+            //console.log("hello");
+            test.remove();
+        }
+    })
+}
+
+
+
 // Display inbox tasks 
 
 function displayInboxTasks(inboxTasks)
 {
     
     const testSticky = document.getElementById("task-container");
-    testSticky.innerHTML = '';
+    
     inboxTasks.forEach(function(item)
     {
 
@@ -49,5 +74,5 @@ function displayInboxTasks(inboxTasks)
 )};
 
 
-export {closeTaskWindow, displayInboxTasks}
+export {closeTaskWindow, displayInboxTasks, clearTaskContainer, removeSticky}
 
