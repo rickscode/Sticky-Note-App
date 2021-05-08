@@ -8,15 +8,13 @@ function closeTaskWindow()
     
     taskWindow.style.visibility="hidden";
     taskInputWindow.value = "";
-    // clear dom
-    // let clearDomStickies = document.getElementById("task-container");
-    // clearDomStickies.innerHTML = '';
+    
 }
 
 // Clear inbox tasks
 function clearTaskContainer()
     {
-    console.log("clear")
+    //console.log("clear")
     const taskBoard = document.getElementById("task-container");
     taskBoard.innerHTML = '';
     }
@@ -30,13 +28,11 @@ function removeSticky()
         if(e.target.className == "sticky-note")
         {
             const test = e.target;
-            //console.log("hello");
+            
             test.remove();
         }
     })
 }
-
-
 
 // Display inbox tasks 
 
@@ -72,6 +68,8 @@ function displayInboxTasks(inboxTasks)
     }
 
 )};
+
+
 
 
 export {closeTaskWindow, displayInboxTasks, clearTaskContainer, removeSticky}

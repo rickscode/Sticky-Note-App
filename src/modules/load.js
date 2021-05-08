@@ -9,8 +9,6 @@ import {removeSticky} from "./task-dom"
 const inbox = new Project("inbox");
 const inboxTasks = inbox.tasks;
 
-let testTrigger = document.querySelectorAll(".sticky-note");
-
 function createTask()
 {
 
@@ -34,11 +32,9 @@ function manageInboxTask(task)
 
     // push task to inbox array 
     inbox.setTasks(task)
-    
-    console.log(inbox)
 
-    // display inbox task array on dom
-    displayInboxTasks(inboxTasks)
+    // display tasks on dom
+    displayStacksTask()
     
     // remove task from inbox array 
     let testTrigger = document.querySelectorAll(".sticky-note");
@@ -54,19 +50,76 @@ function manageInboxTask(task)
         stickyArr.splice(1, 1);
     
         let finishedSticky = stickyArr[0].textContent;
-    
-        console.log(finishedSticky)
-    
+        
         inbox.removeTask(finishedSticky);
         
-        console.log(inbox);
-
         removeSticky();
-
-        //displayInboxTasks(inboxTasks)
     
     })
     })
 }
 
-export {createTask}
+function todayTasks()
+{
+
+    let tasksDueToday = [];
+    // duplicate of inbox tasks
+    let allTasksCopy = JSON.parse(JSON.stringify(inboxTasks));
+   
+    console.log(allTasksCopy);
+    
+     // todays date in string format
+    let date = new Date();
+    //console.log(date)
+
+     // convert string date to yyyy-mm-dd format
+
+    function convertDate(date) {
+        let yyyy = date.getFullYear().toString();
+        let mm = (date.getMonth()+1).toString();
+        let dd  = date.getDate().toString();
+    
+        let mmChars = mm.split('');
+        let ddChars = dd.split('');
+    
+        return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+    }
+
+   // store new formatted date in variable
+
+    let todayFormatted = convertDate(date);
+
+    console.log(todayFormatted);
+
+
+   // get index of object with date matching todays date
+  
+  for(let i = 0; i < allTasksCopy.length +1; i++)
+  {
+    let findTodayDateIndex = [allTasksCopy.map(function(item) { return item.date; }).indexOf(todayFormatted)];
+  
+    console.log(findTodayDateIndex)
+
+  
+     // slice allTasksCopy index into new array
+  
+     tasksDueToday.push(allTasksCopy[findTodayDateIndex])
+
+     // splice remove index 0 from array
+     allTasksCopy.splice(findTodayDateIndex, 1);
+    
+     //console.log(allTasksCopy);
+
+}
+clearTaskContainer()
+displayInboxTasks(tasksDueToday)
+console.log(tasksDueToday)
+}
+
+
+function displayStacksTask()
+{
+    clearTaskContainer()
+    displayInboxTasks(inboxTasks)
+}
+export {createTask, todayTasks, displayStacksTask}

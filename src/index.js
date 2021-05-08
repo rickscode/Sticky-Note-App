@@ -1,11 +1,9 @@
 // Import 
 import controlSideNav from "./modules/side-menu-function"
 
+import {createTask, todayTasks} from "./modules/load"
 
-// Import default objects
-import {createTask} from "./modules/load"
-
-import {openTaskInput} from "./modules/ui-triggers"
+import {openTaskInput, tasksToday, stacksTasks} from "./modules/ui-triggers"
 
 
 // load load object to store all tasks
@@ -17,7 +15,10 @@ controlSideNav();
 // open task input 
 openTaskInput();
 
+// pass display todays tasks function into today dom trigger function
+tasksToday(todayTasks);
 
+stacksTasks();
 
 
 

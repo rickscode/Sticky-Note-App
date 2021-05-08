@@ -1,5 +1,11 @@
-// import Task from "./task"
-// import Project from "./project"
+import {displayStacksTask} from "./load"
+
+function stacksTasks()
+{
+    const stacksTrigger = document.getElementById("stacks");
+    stacksTrigger.addEventListener("click", displayStacksTask)
+}
+
 
 function openTaskInput()
 {
@@ -12,27 +18,13 @@ function openTaskInput()
     }
 }
 
-export {openTaskInput}
-// export default function newTask()
-// {
-//     const taskInput = document.getElementById("todo-title").value;
-//     const task = new Task(taskInput); 
-//     console.table(task);
-    
-// }
+function tasksToday(today)
+{
+    const todayTrigger = document.getElementById("today");
+    todayTrigger.addEventListener("click", today)
+}
 
-// new project
-// const projectTrigger = document.getElementById("add-project");
-// projectTrigger.addEventListener("click", newProject); 
-
-// export function newProject()
-// {
-//     const projectInput = document.getElementById("project-name").value;
-//     const project = new Project(projectInput); 
-//     console.table(project);
-// }
-
-
+export {openTaskInput, tasksToday, stacksTasks}
 
 
 
