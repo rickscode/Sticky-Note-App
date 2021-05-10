@@ -35,41 +35,22 @@ function manageInboxTask(task)
 
     // display tasks on dom
     displayStacksTask()
-    
-    // remove task from inbox array 
-    let testTrigger = document.querySelectorAll(".sticky-note");
-    testTrigger.forEach((item) => {
-    
-    item.addEventListener("click", function(e)
-    {
-        
-        let stickyNodeList = e.target.children
-    
-        let stickyArr = Array.from(stickyNodeList);
-        
-        stickyArr.splice(1, 1);
-    
-        let finishedSticky = stickyArr[0].textContent;
-        
-        inbox.removeTask(finishedSticky);
-        
-        removeSticky();
-    
-    })
-    })
+    removeTask()
 }
+
 
 function todayTasks()
 {
 
+    // empty array to hold copy of inbox.tasks
     let tasksDueToday = [];
+    
     // duplicate of inbox tasks
     let allTasksCopy = JSON.parse(JSON.stringify(inboxTasks));
-   
-    console.log(allTasksCopy);
-    
-     // todays date in string format
+
+    // todays date in string format
     let date = new Date();
+    
     //console.log(date)
 
      // convert string date to yyyy-mm-dd format
@@ -111,9 +92,11 @@ function todayTasks()
      //console.log(allTasksCopy);
 
 }
+
 clearTaskContainer()
 displayInboxTasks(tasksDueToday)
 console.log(tasksDueToday)
+
 }
 
 
@@ -121,5 +104,30 @@ function displayStacksTask()
 {
     clearTaskContainer()
     displayInboxTasks(inboxTasks)
+}
+
+function removeTask()
+    {
+    let testTrigger = document.querySelectorAll(".sticky-note");
+    testTrigger.forEach((item) => {
+    
+    item.addEventListener("click", function(e)
+    {
+        
+        let stickyNodeList = e.target.children
+    
+        let stickyArr = Array.from(stickyNodeList);
+        
+        stickyArr.splice(1, 1);
+    
+        let finishedSticky = stickyArr[0].textContent;
+        
+        inbox.removeTask(finishedSticky);
+        
+        removeSticky();
+    
+        console.log(inbox.tasks)
+    })
+    })
 }
 export {createTask, todayTasks, displayStacksTask}
